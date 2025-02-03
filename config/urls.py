@@ -10,4 +10,5 @@ urlpatterns = [
     path('pericias/', PericiasView.as_view(), name='pericias'),
     path('pessoas/', PessoasView.as_view(), name='pessoas'),
     path('campanhas/', CampanhasView.as_view(), name='campanhas'),
+    path('personagens/', PersonagensView.as_view(), name='personagens'),
 ]
