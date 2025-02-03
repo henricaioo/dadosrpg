@@ -33,7 +33,8 @@ class PericiasView(View):
 class PessoasView(View):
     def get(self, request, *args, **kwargs):
         pessoas = Pessoa.objects.all()
-        return render(request, 'pessoas.html', {'pessoas' : pessoas})
+        personagens = Personagem.objects.values(Personagem.pessoa)
+        return render(request, 'pessoas.html', {'pessoas' : pessoas, 'personagens': personagens})
     def post(self, request):
         pass
 
